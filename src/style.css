@@ -1,0 +1,88 @@
+/* * {
+  background: #1d1e20;
+} */
+html {
+  background: #1d1e20;
+}
+.container {
+  display: grid;
+  grid-template-columns: 10% 90%;
+
+  margin: 0 auto;
+
+  height: 98vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.col1 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr 1fr;
+  border: 2px solid white;
+  background: #1d1e20;
+}
+
+.col2 {
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  border: 2px solid white;
+}
+
+.row1,
+.row2,
+.row3,
+.row4,
+.row5,
+.row6 {
+  border: 2px solid rgb(195, 182, 166);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.row1 {
+  background-color: lightblue;
+  background: url("./comma.png");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.row2 {
+  background-color: lightgreen;
+  background: url("./globe.png");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.row3 {
+  background-color: lightyellow;
+  background: url("./dots.png");
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.row4 {
+  background-color: lightpink;
+  background: url("./github.png");
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.row5 {
+  display: grid;
+  background-color: #1d1e20;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.row6 {
+  background-color: #1d1e20;
+}
+
+.portfolio-item.hidden {
+  display: none;
+}
+
+/* .portfolio-item {
+  transform: translateY(-10rem);
+} */
