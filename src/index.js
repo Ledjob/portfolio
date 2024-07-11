@@ -1,100 +1,180 @@
 import "./style.css";
 import "./slider.css";
 import "./portfolio.css";
+import "./contact.css";
 import Comma from "./comma.png";
 import Globe from "./globe.png";
 import Dots from "./dots.png";
 import Github from "./github.png";
+import Call from "./call.png";
 
 const rowContainer = document.querySelector(".row-container");
 const boxCentral = document.querySelector(".row5");
+const dynamicContent = document.createElement("div");
+dynamicContent.id = "dynamic-content";
+boxCentral.appendChild(dynamicContent);
 
 const para = document.querySelector(".row1");
-para.addEventListener("click", changePage);
+para.addEventListener("click", () => showSection("home"));
 
 const realisation = document.querySelector(".row2");
-realisation.addEventListener("click", showPortfolio);
+realisation.addEventListener("click", () => showSection("portfolio"));
 
 const moreInfo = document.querySelector(".row3");
-moreInfo.addEventListener("click", showMoreInfo);
+moreInfo.addEventListener("click", () => showSection("contact"));
 
-function showMoreInfo() {
-  //if content clear content
-  //create div and content to show my contact info (I will use animations)
+function showSection(section) {
+  // Clear existing content
+  dynamicContent.innerHTML = "";
+
+  // Hide row container for all sections except home
+  rowContainer.style.display = section === "home" ? "block" : "none";
+
+  // Show appropriate content
+  switch (section) {
+    case "home":
+      showHome();
+      break;
+    case "portfolio":
+      showPortfolio();
+      break;
+    case "contact":
+      showContact();
+      break;
+  }
 }
 
-//needs to update or change the way we manage remove/hide etc.
-function changePage() {
-  titlePortolio.remove();
-  ImagePortfolio1.remove();
-
-  ImagePortfolio2.remove();
-  ImagePortfolio3.remove();
-  img1.remove();
-  img2.remove();
-  img3.remove();
-
-  rowContainer.style.display = "block";
-  console.log("hello");
+function showHome() {
+  // Add any specific home content here if needed
+  console.log("Showing home");
 }
-
-const wrapperPortfolio = document.createElement("div");
-wrapperPortfolio.classList.add("wrapper-portfolio");
-
-const titlePortolio = document.createElement("div");
-titlePortolio.classList.add("title-portfolio");
-
-const ImagePortfolio1 = document.createElement("div");
-const img1 = document.createElement("img");
-ImagePortfolio1.classList.add("image-portfolio1");
-
-const ImagePortfolio2 = document.createElement("div");
-const img2 = document.createElement("img");
-ImagePortfolio2.classList.add("image-portfolio2");
-
-const ImagePortfolio3 = document.createElement("div");
-const img3 = document.createElement("img");
-ImagePortfolio3.classList.add("image-portfolio3");
 
 function showPortfolio() {
-  rowContainer.style.display = "none";
+  const wrapperPortfolio = document.createElement("div");
+  wrapperPortfolio.classList.add("wrapper-portfolio");
 
-  // Clear existing content
-  wrapperPortfolio.innerHTML = "";
-  titlePortolio.textContent = "PROJECTS";
+  const titlePortfolio = document.createElement("div");
+  titlePortfolio.classList.add("title-portfolio");
+  titlePortfolio.textContent = "PROJECTS";
 
-  // Creating and adding images to ImagePortfolio1
-  img1.src = "https://placehold.co/400x400";
-  ImagePortfolio1.innerHTML = ""; // Clear existing content
-  ImagePortfolio1.appendChild(img1);
-  ImagePortfolio1.appendChild(document.createTextNode("Restaurant website"));
+  const portfolioItems = document.createElement("div");
+  portfolioItems.classList.add("portfolio-items");
 
-  // Creating and adding images to ImagePortfolio2
-  img2.src = "https://placehold.co/400x400";
-  ImagePortfolio2.innerHTML = ""; // Clear existing content
-  ImagePortfolio2.appendChild(img2);
-  ImagePortfolio2.appendChild(document.createTextNode("Activity Tracker"));
+  wrapperPortfolio.appendChild(titlePortfolio);
+  wrapperPortfolio.appendChild(portfolioItems);
 
-  // Creating and adding images to ImagePortfolio3
-  img3.src = "https://placehold.co/400x400";
-  ImagePortfolio3.innerHTML = ""; // Clear existing content
-  ImagePortfolio3.appendChild(img3);
-  ImagePortfolio3.appendChild(document.createTextNode("Henlo"));
+  const projects = [
+    { title: "Restaurant website", img: "https://placehold.co/400x400" },
+    { title: "Activity Tracker", img: "https://placehold.co/400x400" },
+    { title: "Henlo", img: "https://placehold.co/400x400" },
+  ];
 
-  // Check if elements are already appended
-  if (!boxCentral.contains(wrapperPortfolio)) {
-    boxCentral.appendChild(wrapperPortfolio);
-  }
-  if (!boxCentral.contains(titlePortolio)) {
-    boxCentral.appendChild(titlePortolio);
-  }
-  if (!wrapperPortfolio.contains(ImagePortfolio1)) {
-    wrapperPortfolio.appendChild(ImagePortfolio1);
-  }
-  if (!wrapperPortfolio.contains(ImagePortfolio2)) {
-    wrapperPortfolio.appendChild(ImagePortfolio2);
-  }
-  if (!wrapperPortfolio.contains(ImagePortfolio3)) {
-    wrapperPortfolio.appendChild(ImagePortfolio3);
-  }
+  projects.forEach((project, index) => {
+    const projectDiv = document.createElement("div");
+    projectDiv.classList.add(`image-portfolio${index + 1}`);
+
+    const img = document.createElement("img");
+    img.src = project.img;
+
+    const title = document.createElement("p");
+    title.textContent = project.title;
+
+    projectDiv.appendChild(img);
+    projectDiv.appendChild(title);
+
+    portfolioItems.appendChild(projectDiv);
+  });
+
+  dynamicContent.appendChild(wrapperPortfolio);
 }
+
+function showContact() {
+  const ticket = document.createElement("div");
+  ticket.classList.add("ticket");
+
+  const leftPart = document.createElement("div");
+  leftPart.classList.add("left");
+
+  const rightPart = document.createElement("div");
+  rightPart.classList.add("right");
+
+  const ticketWrapper = document.createElement("div");
+  ticketWrapper.classList.add("ticket-content-wrapper");
+
+  //to add
+  const ticketVisualProfile = document.createElement("div");
+  ticketVisualProfile.classList.add("ticket-visual-profile");
+
+  const myEmail = document.createElement("div");
+  myEmail.classList.add("my-email");
+  myEmail.textContent = "ex@example.com";
+
+  const devTitle = document.createElement("div");
+  devTitle.classList.add("dev-title");
+  devTitle.textContent = "Full-stack";
+
+  const dev = document.createElement("div");
+  dev.classList.add("dev");
+  dev.textContent = "dev";
+
+  const ticketVisual = document.createElement("div");
+  ticketVisual.classList.add("ticket-profile-profile");
+
+  const ticketImg = document.createElement("img");
+  ticketImg.classList.add("ticket-profile-image");
+  ticketImg.src = "https://github.com/ledjob.png";
+
+  const ticketProfileText = document.createElement("div");
+  ticketProfileText.classList.add("ticket-profile-text");
+
+  const ticketPorfileName = document.createElement("p");
+  ticketPorfileName.classList.add("ticket-profile-name");
+  ticketPorfileName.textContent = "Sasha Daxler";
+
+  const ticketVisualNumberWrapper = document.createElement("div");
+  ticketVisualNumberWrapper.classList.add("ticket-visual-number-wrapper");
+
+  const ticketVisualNumber = document.createElement("div");
+  ticketVisualNumber.classList.add("ticket-visual-number");
+  ticketVisualNumber.textContent = "№ 888888";
+
+  const contactInfo = document.createElement("div");
+  contactInfo.classList.add("contact-info");
+
+  const title = document.createElement("h2");
+  title.textContent = "CONTACT INFORMATION";
+
+  const email = document.createElement("p");
+  email.textContent = "Email: ex@example.com";
+
+  const phone = document.createElement("p");
+  phone.textContent = "Phone: (123) 456-7890";
+
+  contactInfo.appendChild(title);
+  ticketWrapper.appendChild(ticketVisualProfile);
+  ticketVisualProfile.appendChild(ticketVisual);
+  ticketVisual.appendChild(ticketImg);
+  ticketVisual.appendChild(ticketProfileText);
+  ticketProfileText.appendChild(ticketPorfileName);
+  ticketWrapper.appendChild(ticketVisualNumberWrapper);
+  ticketVisualNumberWrapper.appendChild(ticketVisualNumber);
+  ticketVisualNumberWrapper.appendChild(myEmail);
+  ticketWrapper.appendChild(devTitle);
+  ticketWrapper.appendChild(dev);
+
+  // ticketWrapper.appendChild(phone);
+
+  ticket.appendChild(leftPart);
+  ticket.appendChild(rightPart);
+  ticket.appendChild(ticketWrapper);
+
+  contactInfo.appendChild(ticket);
+
+  // Add animation class
+  contactInfo.classList.add("fade-in");
+
+  dynamicContent.appendChild(contactInfo);
+}
+
+// Initial load
+showSection("home");
