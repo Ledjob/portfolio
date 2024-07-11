@@ -69,6 +69,7 @@ html {
   background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 .row5 {
   display: grid;
@@ -89,3 +90,32 @@ html {
 /* .portfolio-item {
   transform: translateY(-10rem);
 } */
+
+/* github part  */
+
+#github-info {
+  display: flex;
+  text-align: center;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+#github-info h2 {
+  margin: 10px 0;
+}
+
+#github-info p {
+  margin: 5px 0;
+  color: antiquewhite;
+  font-size: 2rem;
+}
+
+#github-info a {
+  color: #56a8c6;
+  text-decoration: none;
+}
+
+#github-info a:hover {
+  text-decoration: underline;
+}

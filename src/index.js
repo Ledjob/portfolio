@@ -23,6 +23,13 @@ realisation.addEventListener("click", () => showSection("portfolio"));
 const moreInfo = document.querySelector(".row3");
 moreInfo.addEventListener("click", () => showSection("contact"));
 
+const githubLink = document.querySelector(".row4");
+githubLink.addEventListener("click", () => showGithub());
+
+function showGithub() {
+  open("https://github.com/ledjob");
+}
+
 function showSection(section) {
   // Clear existing content
   dynamicContent.innerHTML = "";
@@ -175,6 +182,79 @@ function showContact() {
 
   dynamicContent.appendChild(contactInfo);
 }
+
+//uncomment for api call
+
+// async function fetchGitHubData(username) {
+//   try {
+//     // Fetch user profile data
+//     const profileResponse = await fetch(
+//       `https://api.github.com/users/${username}`
+//     );
+
+//     if (profileResponse.status === 403) {
+//       displayErrorMessage(
+//         "Sorry, API rate limit reached. Please try again later."
+//       );
+//       return;
+//     }
+
+//     const profileData = await profileResponse.json();
+
+//     // Fetch user repositories data
+//     const reposResponse = await fetch(profileData.repos_url);
+
+//     if (reposResponse.status === 403) {
+//       displayErrorMessage(
+//         "Sorry, API rate limit reached. Please try again later."
+//       );
+//       return;
+//     }
+
+//     const reposData = await reposResponse.json();
+
+//     // Display the fetched data
+//     displayGitHubData(profileData, reposData);
+//   } catch (error) {
+//     console.error("Error fetching GitHub data:", error);
+//     displayErrorMessage(
+//       "An error occurred while fetching data. Please try again later."
+//     );
+//   }
+// }
+
+// function displayGitHubData(profileData, reposData) {
+//   const githubInfoDiv = document.getElementById("github-info");
+
+//   // Create and append profile data
+//   const profileDiv = document.createElement("div");
+//   profileDiv.innerHTML = `
+
+//     <p>Followers: ${profileData.followers} - Following: ${profileData.following}</p>
+//     <p>Public Repos: ${profileData.public_repos}</p>
+//   `;
+//   githubInfoDiv.appendChild(profileDiv);
+
+//   // Create and append repositories data
+//   // const reposDiv = document.createElement("div");
+//   // reposDiv.innerHTML = "<h3>Repositories</h3>";
+//   // reposData.slice(0, 5).forEach((repo) => {
+//   //   const repoElement = document.createElement("p");
+//   //   repoElement.innerHTML = `<a href="${repo.html_url}" target="_blank">${
+//   //     repo.name
+//   //   }</a>: ${repo.description || "No description"}`;
+//   //   reposDiv.appendChild(repoElement);
+//   // });
+//   // githubInfoDiv.appendChild(reposDiv);
+// }
+
+// function displayErrorMessage(message) {
+//   const githubInfoDiv = document.getElementById("github-info");
+//   githubInfoDiv.innerHTML = `<p>${message}</p>`;
+// }
+
+// // Call the function with your GitHub username
+// fetchGitHubData("ledjob");
 
 // Initial load
 showSection("home");
