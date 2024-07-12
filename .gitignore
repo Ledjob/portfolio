@@ -21,6 +21,6 @@
 .eslintcache
 .cspellcache
 package-lock.json
-dist
+# dist
 todo.txt
 .env

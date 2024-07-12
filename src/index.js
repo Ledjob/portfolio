@@ -141,4 +141,4 @@ function displayErrorMessage(message) {
 fetchGitHubData("ledjob");
 
 // Initial load
-showSection("contact");
+showSection("home");

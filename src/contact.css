@@ -46,10 +46,10 @@
   background-image: url(./assets/call.png);
   height: 900px; /* You must set a specified height */
 
-  background-position: right; /* Center the image */
+  background-position: top right; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   /* Resize the background image to cover the entire container */
-  background-size: 800px 500px;
+  background-size: 800px 600px;
 }
 
 .dev {
