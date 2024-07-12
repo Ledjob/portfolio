@@ -22,4 +22,5 @@
 .cspellcache
 package-lock.json
 dist
+todo.txt
 .env

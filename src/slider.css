@@ -62,12 +62,16 @@
 .title2 {
   font-size: 8rem;
   color: #7c97c6;
-  transform: translateX(-20rem) translateY(5rem);
+  transform: translateX(-20rem) translateY(4rem);
+}
+
+.contrast {
+  background-color: #a9a5f0;
 }
 
 .title3 {
   font-size: 8rem;
-  color: #a3c67c;
+  color: #9e7cc6;
   /* color: #dde570; */
 }
 
