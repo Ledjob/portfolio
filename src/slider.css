@@ -99,7 +99,7 @@ p {
 .part2 {
   justify-content: center;
   align-items: center;
-  transform: translateX(28rem) translateY(-2rem);
+  transform: translateX(28rem) translateY(10rem);
   color: antiquewhite;
   font-size: 3rem;
   font-family: system-ui;
@@ -115,6 +115,7 @@ p {
   font-size: 5rem;
   font-family: system-ui;
   transform: translateX(1rem);
+  padding-top: 2rem;
 }
 
 #slides .slide_1 {
@@ -125,6 +126,7 @@ p {
 }
 #slides .slide_3 {
   background: #1d1e20;
+  transform: translateY(-2rem);
 }
 
 #controls {
