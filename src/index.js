@@ -41,6 +41,13 @@ function showSection(section) {
   // Clear existing content
   dynamicContent.innerHTML = "";
 
+  // Hide background image for all sections except contact
+  if (section === "contact") {
+    console.log("hello");
+    boxCentral.style.backgroundImage = `url(${Call})`;
+  } else {
+    boxCentral.style.backgroundImage = "none";
+  }
   // Hide row container for all sections except home
   rowContainer.style.display = section === "home" ? "block" : "none";
 
@@ -78,7 +85,7 @@ async function fetchGitHubData(username) {
 
     if (profileResponse.status === 403) {
       displayErrorMessage(
-        "Sorry, API rate limit reached. Please try again later."
+        "Sorry, Github API rate limit reached. Please try again later."
       );
       return;
     }
@@ -90,7 +97,7 @@ async function fetchGitHubData(username) {
 
     if (reposResponse.status === 403) {
       displayErrorMessage(
-        "Sorry, API rate limit reached. Please try again later."
+        "Sorry, Github API rate limit reached. Please try again later."
       );
       return;
     }

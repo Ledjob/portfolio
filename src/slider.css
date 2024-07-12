@@ -19,7 +19,7 @@
   position: relative;
   z-index: 1;
   /* changed to fit github website display */
-  height: 75vh;
+  height: 80vh;
 }
 #overflow {
   width: 100%;
