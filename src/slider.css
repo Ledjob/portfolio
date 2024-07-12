@@ -54,13 +54,21 @@
   font-family: system-ui;
 }
 
+.title1 {
+  font-size: 20rem;
+  transform: translateY(10rem);
+}
+
 .title2 {
   font-size: 8rem;
-  color: rgb(151, 232, 245);
+  color: #7c97c6;
+  transform: translateX(-20rem) translateY(5rem);
 }
 
 .title3 {
   font-size: 8rem;
+  color: #a3c67c;
+  /* color: #dde570; */
 }
 
 .title4 {
@@ -68,26 +76,23 @@
 }
 
 p {
-  margin-top: 10rem;
+  margin-top: 5rem;
   color: rgb(172, 108, 173);
   font-size: 2rem;
-  transform: translateX(5rem);
   font-family: "Roboto";
 }
 
 .part1 {
-  color: rgb(172, 108, 173);
+  color: #9d7bf0;
   font-size: 10rem;
-  transform: translateX(5rem) translateY(-6rem);
+  transform: translateX(5rem) translateY(-10rem);
   font-family: "Roboto";
 }
 
 .part2 {
-  color: rgb(82, 82, 233);
-
   justify-content: center;
   align-items: center;
-  transform: translateX(28rem) translateY(-10rem);
+  transform: translateX(28rem) translateY(-8rem);
   color: antiquewhite;
   font-size: 3rem;
   font-family: system-ui;
@@ -102,6 +107,7 @@ p {
   color: antiquewhite;
   font-size: 5rem;
   font-family: system-ui;
+  transform: translateX(1rem);
 }
 
 #slides .slide_1 {

@@ -4,9 +4,11 @@ import "./portfolio.css";
 import "./contact.css";
 import Comma from "./comma.png";
 import Globe from "./globe.png";
+import Globe2 from "./globe2.png";
 import Dots from "./dots.png";
 import Github from "./github.png";
 import Call from "./call.png";
+import Quote from "./quote.png";
 
 const rowContainer = document.querySelector(".row-container");
 const boxCentral = document.querySelector(".row5");
@@ -73,7 +75,7 @@ function showPortfolio() {
   const projects = [
     { title: "Restaurant website", img: "https://placehold.co/400x400" },
     { title: "Activity Tracker", img: "https://placehold.co/400x400" },
-    { title: "Henlo", img: "https://placehold.co/400x400" },
+    { title: "Henlo App", img: "https://placehold.co/400x400" },
   ];
 
   projects.forEach((project, index) => {
@@ -108,7 +110,6 @@ function showContact() {
   const ticketWrapper = document.createElement("div");
   ticketWrapper.classList.add("ticket-content-wrapper");
 
-  //to add
   const ticketVisualProfile = document.createElement("div");
   ticketVisualProfile.classList.add("ticket-visual-profile");
 

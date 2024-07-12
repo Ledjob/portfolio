@@ -15,10 +15,14 @@ html {
   box-sizing: border-box;
 }
 
+.ticket-profile-name {
+  transform: translateX(5rem);
+}
+
 .col1 {
   display: grid;
   grid-template-rows: 1fr 1fr 3fr 1fr;
-  border: 2px solid #d1cfe2;
+  border: 2px solid antiquewhite;
   background: #1d1e20;
 }
 
@@ -34,14 +38,14 @@ html {
 .row4,
 .row5,
 .row6 {
-  border: 2px solid #d1cfe2;
+  border: 2px solid antiquewhite;
   padding: 10px;
   box-sizing: border-box;
 }
 
 .row1 {
   background-color: lightblue;
-  background: url("./comma.png");
+  background: url("./quote.png");
   background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,7 +53,7 @@ html {
 }
 .row2 {
   background-color: lightgreen;
-  background: url("./globe.png");
+  background: url("./globe2.png");
   background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
