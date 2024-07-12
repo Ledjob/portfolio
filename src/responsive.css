@@ -1,0 +1,214 @@
+@media screen and (max-width: 850px) {
+  .col1 {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    border: 1px solid antiquewhite;
+    background: #1d1e20;
+  }
+  .col2 {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    border: 1px solid #d1cfe2;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin: 0;
+    height: auto;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  .row5 {
+    display: grid;
+    background-color: #1d1e20;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #slider {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  #slides {
+    height: 50vh;
+    position: relative;
+    z-index: 1;
+    padding: 5px;
+  }
+  #slides .inner {
+    height: 65vh;
+  }
+  #slides .slide {
+    font-size: 5rem;
+  }
+  .title1 {
+    font-size: 3rem;
+    transform: translateY(6rem);
+  }
+  .title2 {
+    font-size: 2rem;
+    transform: translateX(0rem);
+  }
+  .title3 {
+    font-size: 2rem;
+  }
+  .title4 {
+    font-size: 1.5rem;
+  }
+  p {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  .part1 {
+    font-size: 2rem;
+    transform: translateX(1rem) translateY(5rem);
+  }
+  .part2 {
+    transform: translateX(5rem);
+    font-size: 1rem;
+  }
+  .part3 {
+    font-size: 1.5rem;
+    transform: translateX(0rem) translateY(3rem);
+  }
+  #controls {
+    margin: -100px 0 0 0;
+  }
+  #controls label {
+    width: 30px;
+    height: 30px;
+  }
+  #slide1:checked ~ #controls label:nth-child(2),
+  #slide2:checked ~ #controls label:nth-child(3),
+  #slide3:checked ~ #controls label:nth-child(1) {
+    margin: -10% 0 0 0;
+    background-size: 100%;
+  }
+  #slide1:checked ~ #controls label:nth-last-child(1),
+  #slide2:checked ~ #controls label:nth-last-child(3),
+  #slide3:checked ~ #controls label:nth-last-child(2) {
+    margin: -10% 0 0 0;
+    background-size: 100%;
+  }
+  #bullets {
+    margin: 50px 0 0;
+  }
+  #bullets label {
+    width: 6px;
+    height: 6px;
+    margin: 0 3px;
+  }
+
+  /* portfolio part  */
+
+  .title-portfolio {
+    color: antiquewhite;
+    font-size: 2rem;
+    font-family: system-ui;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-items {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .image-portfolio1,
+  .image-portfolio2,
+  .image-portfolio3 {
+    border-radius: 4px;
+    width: 150px;
+    text-align: center;
+  }
+
+  .image-portfolio1 img,
+  .image-portfolio2 img,
+  .image-portfolio3 img {
+    margin-bottom: 0rem;
+  }
+
+  /* contact part  */
+
+  .row5 {
+    height: 900px; /* You must set a specified height */
+
+    background-position: right; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    /* Resize the background image to cover the entire container */
+    background-size: 800px 500px;
+  }
+
+  .contact-info {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .contact-info p {
+    font-size: 3rem;
+  }
+
+  .ticket-visual-profile {
+    padding: 10px;
+  }
+
+  .dev-title,
+  .dev,
+  .my-email {
+    transform: translateY(0) translateX(0);
+  }
+
+  .ticket-profile-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ticket-profile-image {
+    width: 80px;
+    height: 80px;
+    transform: translateY(0) translateX(-0rem);
+  }
+
+  .ticket-profile-name {
+    font-size: 1rem;
+    margin: 5px 0;
+    transform: translateX(0rem);
+  }
+
+  .ticket-visual-number-wrapper {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .ticket-visual-number {
+    transform: rotate(0) translateY(1.5rem);
+    font-size: 1rem;
+    width: 100%;
+    border-bottom: none;
+  }
+
+  .ticket {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    transform: translateX(-10px);
+    padding: 10px;
+  }
+
+  .ticket-content-wrapper {
+    padding: 10px;
+  }
+
+  .ticket:before,
+  .ticket:after,
+  .ticket-content-wrapper:before,
+  .ticket-content-wrapper:after,
+  .left,
+  .right {
+    display: none;
+  }
+}

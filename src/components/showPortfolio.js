@@ -16,7 +16,7 @@ export function showPortfolio() {
   const projects = [
     { title: "Restaurant website", img: "https://placehold.co/400x400" },
     { title: "Activity Tracker", img: "https://placehold.co/400x400" },
-    { title: "Henlo App", img: "https://placehold.co/400x400" },
+    { title: "Henlo  App", img: "https://placehold.co/400x400" },
   ];
 
   projects.forEach((project, index) => {

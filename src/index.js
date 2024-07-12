@@ -2,6 +2,7 @@ import "./style.css";
 import "./slider.css";
 import "./portfolio.css";
 import "./contact.css";
+import "./responsive.css";
 
 import { showContact } from "./components/showContacts";
 import { showPortfolio } from "./components/showPortfolio";
@@ -140,4 +141,4 @@ showContact();
 // fetchGitHubData("ledjob");
 
 // Initial load
-showSection("home");
+showSection("contact");
