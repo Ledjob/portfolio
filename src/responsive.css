@@ -176,7 +176,7 @@
   .ticket-profile-name {
     font-size: 1rem;
     margin: 5px 0;
-    transform: translateX(0rem);
+    transform: translateX(5rem);
   }
 
   .ticket-visual-number-wrapper {

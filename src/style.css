@@ -9,7 +9,7 @@ html {
   grid-template-columns: 10% 90%;
 
   margin: 0 auto;
-
+  border: 2px solid antiquewhite;
   height: 98vh;
   padding: 20px;
   box-sizing: border-box;
@@ -22,14 +22,14 @@ html {
 .col1 {
   display: grid;
   grid-template-rows: 1fr 1fr 3fr 1fr;
-  border: 2px solid antiquewhite;
+  /* border: 2px solid antiquewhite; */
   background: #1d1e20;
 }
 
 .col2 {
   display: grid;
   grid-template-rows: 5fr 1fr;
-  border: 2px solid #d1cfe2;
+  /* border: 2px solid #d1cfe2; */
 }
 
 .row1,
