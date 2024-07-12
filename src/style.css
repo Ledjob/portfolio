@@ -45,7 +45,7 @@ html {
 
 .row1 {
   background-color: lightblue;
-  background: url("./quote.png");
+  background: url("./assets/quote.png");
   background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@ html {
 }
 .row2 {
   background-color: lightgreen;
-  background: url("./globe2.png");
+  background: url("./assets/globe2.png");
   background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,7 +61,7 @@ html {
 }
 .row3 {
   background-color: lightyellow;
-  background: url("./dots.png");
+  background: url("./assets/dots.png");
   background-size: 150%;
   background-position: center;
   background-repeat: no-repeat;
@@ -69,7 +69,7 @@ html {
 }
 .row4 {
   background-color: lightpink;
-  background: url("./github.png");
+  background: url("./assets/github.png");
   background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
