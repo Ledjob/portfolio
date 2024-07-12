@@ -64,7 +64,7 @@
 .title2 {
   font-size: 8rem;
   color: #7c97c6;
-  transform: translateX(-20rem) translateY(4rem);
+  transform: translateX(-20rem) translateY(6rem);
 }
 
 .contrast {
@@ -72,9 +72,10 @@
 }
 
 .title3 {
-  font-size: 8rem;
+  font-size: 6rem;
   /* color: #9e7cc6; */
   color: #5075ed;
+  transform: translateY(5rem);
 }
 
 .title4 {
@@ -98,7 +99,7 @@ p {
 .part2 {
   justify-content: center;
   align-items: center;
-  transform: translateX(28rem) translateY(-8rem);
+  transform: translateX(28rem) translateY(-2rem);
   color: antiquewhite;
   font-size: 3rem;
   font-family: system-ui;

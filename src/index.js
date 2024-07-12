@@ -43,7 +43,6 @@ function showSection(section) {
 
   // Hide background image for all sections except contact
   if (section === "contact") {
-    console.log("hello");
     boxCentral.style.backgroundImage = `url(${Call})`;
   } else {
     boxCentral.style.backgroundImage = "none";
