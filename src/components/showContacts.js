@@ -84,4 +84,37 @@ export function showContact() {
   contactInfo.classList.add("fade-in");
 
   dynamic.appendChild(contactInfo);
+
+  const ticketElm = document.querySelector(".ticket");
+  const contentWrapperElm = document.querySelector(".ticket-content-wrapper");
+
+  if (ticketElm && contentWrapperElm) {
+    const updateTransform = (e) => {
+      const { left, top, width, height } = ticketElm.getBoundingClientRect();
+      const centerPoint = { x: left + width / 2, y: top + height / 2 };
+
+      const degreeX = (e.clientY - centerPoint.y) * 0.04;
+      const degreeY = (e.clientX - centerPoint.x) * -0.04;
+
+      const gradientAngle =
+        Math.atan2(e.clientY - centerPoint.y, e.clientX - centerPoint.x) *
+        (180 / Math.PI);
+
+      ticketElm.style.transform = `perspective(1000px) rotateX(${degreeX}deg) rotateY(${degreeY}deg) translateX(-150px)`;
+
+      contentWrapperElm.style.background = `linear-gradient(${gradientAngle}deg, #1d1e20, #121212, #1d1e20)`;
+
+      const beforeElm = contentWrapperElm.querySelector("::before");
+      if (beforeElm) {
+        beforeElm.style.transform = `rotate(${gradientAngle}deg)`;
+      }
+    };
+
+    window.addEventListener("mousemove", updateTransform);
+
+    window.addEventListener("resize", () => {
+      const { left, top, width, height } = ticketElm.getBoundingClientRect();
+      centerPoint = { x: left + width / 2, y: top + height / 2 };
+    });
+  }
 }
